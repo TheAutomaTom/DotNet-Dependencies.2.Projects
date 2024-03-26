@@ -18,7 +18,7 @@ namespace FunctionApp
 
       string responseMessage = DeepThinker.TheAnswer;
 
-      return new OkObjectResult(responseMessage);
+      return new OkObjectResult($"The answer is {responseMessage}.");
     }
   }
 }
