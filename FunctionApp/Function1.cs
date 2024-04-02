@@ -8,17 +8,16 @@ using Microsoft.Extensions.Logging;
 
 namespace FunctionApp
 {
-  public static class Function1
+  public class Function1
   {
-    [FunctionName("how-many-times-must-one-look-up-before-they-can-see-the-sky")]
-    public static async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req, ILogger log)
+    [FunctionName("what-is-six-times-seven")]
+    public async Task<IActionResult> Run([HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req, ILogger log)
     {
       log.LogInformation("C# HTTP trigger function processed a request.");
 
+      string responseMessage = QuestionResolver.Answer;
 
-      string responseMessage = DeepThinker.TheAnswer;
-
-      return new OkObjectResult($"The answer is {responseMessage}.");
+      return new OkObjectResult($"What is six times seven? \nThe answer is {responseMessage}.");
     }
   }
 }

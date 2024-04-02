@@ -7,7 +7,7 @@
     <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="4.2.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\GitSubmodules.Library\ClassLibrary\ClassLibrary.csproj" />
+    <ProjectReference Include="..\..\DotNet-Dependencies.0.ExampleClassLibrary\ClassLibrary\ClassLibrary.csproj" />
   </ItemGroup>
   <ItemGroup>
     <None Update="host.json">
